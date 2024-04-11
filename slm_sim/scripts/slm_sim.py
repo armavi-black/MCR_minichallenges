@@ -93,7 +93,7 @@ if __name__=='__main__':
 
         #Establece la entrada de control a 0 (Busca estabilizarse hacia abajo)
         #para que mandarle un valor tau este solo actúe un instante y funcione como un kick
-        tau = 0.0
+        # tau = 0.0
 
         jointState(x1,x2)
 

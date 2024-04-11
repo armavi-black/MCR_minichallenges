@@ -12,8 +12,11 @@
     <!--Joint State Publisher --> <!--Uncomment for TESTING ONLY (COMMENT YOUR JOINT STATE PUBLISHER)-->    
     <!-- <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui">
     </node> -->
+    
+    <rosparam file = "$(find slm_sim)/config/impulse_params.yaml" command = "load"  />
 
     <node name="planta" pkg="slm_sim" type="slm_sim.py"/>
+    <node name="impulse_generator" pkg="slm_sim" type="impulse_generator.py"/>
 
     <arg name="rvizconfig" default="$(find slm_sim)/rviz/manipulator.rviz" />
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" /> 
